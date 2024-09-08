@@ -57,7 +57,15 @@ function Success() {
       };
       createOrder();
     }
-  }, []);
+  }, [
+    cart,
+    orderId,
+    payment.mode,
+    payment.promo,
+    shipping.date,
+    shipping.price,
+    user,
+  ]);
 
   return (
     <Layout>
