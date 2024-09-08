@@ -4,7 +4,11 @@ import mongoose from "mongoose";
 const app = express();
 
 // Server settings
-app.use(cors());
+app.use(cors({
+  origin: ["https://nike-clone-frontend-omega.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 app.use(express.json());
 app.listen(8000, () => console.log("Server kickin"));
 
