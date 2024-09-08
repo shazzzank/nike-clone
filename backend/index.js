@@ -11,7 +11,7 @@ app.listen(8000, () => console.log("Server kickin"));
 // Database connection
 mongoose
   .connect(
-    "mongodb+srv://admin:VpC3KJ76HPK-u85KE-KXDk-Rdx8@ecom.1vtmdyo.mongodb.net/?retryWrites=true&w=majority&appName=ecom",
+    "mongodb+srv://admin:VpC3KJ76HPK-u85KE-KXDk-Rdx8@ecom.1vtmdyo.mongodb.net/ecom",
   )
   .then(() => console.log("Database kickin"))
   .catch((err) => console.log(err));
