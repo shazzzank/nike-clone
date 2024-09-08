@@ -25,17 +25,20 @@ function Success() {
   useEffect(() => {
     if (orderId === null) {
       const createOrder = async () => {
+        const userJSON = JSON.parse(sessionStorage.getItem("user")) || {};
+        const cartJSON = JSON.parse(sessionStorage.getItem("cart")) || [];
+
         try {
-          const userRes = await axios.post("/user/create", user);
+          const userRes = await axios.post("/user/create", userJSON);
           const cartRes = await axios.post(
             "/cart/create",
-            cart.map((item) => ({ ...item, product: item.product._id })),
+            cartJSON.map((item) => ({ ...item, product: item.product._id })),
           );
           const orderRes = await axios.post("/order/create", {
             user: userRes.data._id,
             cart: cartRes.data._id,
             amount:
-              cart.reduce((i, { price }) => i + price, 0) + shipping.price,
+              cartJSON.reduce((i, { price }) => i + price, 0) + shipping.price,
             delivery_date: new Date(
               shipping.date.match(/(\w{3} \d{1,2})/g).pop() +
                 " " +
@@ -48,7 +51,7 @@ function Success() {
             mode: payment.mode,
             promo: payment.promo,
             amount:
-              cart.reduce((i, { price }) => i + price, 0) + shipping?.price,
+              cartJSON.reduce((i, { price }) => i + price, 0) + shipping?.price,
             status: payment.mode === "Card" ? "Paid" : "Pending",
           });
         } catch (err) {
@@ -57,15 +60,7 @@ function Success() {
       };
       createOrder();
     }
-  }, [
-    cart,
-    orderId,
-    payment.mode,
-    payment.promo,
-    shipping.date,
-    shipping.price,
-    user,
-  ]);
+  }, [orderId, payment.mode, payment.promo, shipping.date, shipping.price]);
 
   return (
     <Layout>
