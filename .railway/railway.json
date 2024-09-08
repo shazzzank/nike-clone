@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "nike-clone-backend",
+      "type": "node",
+      "builds": [
+        {
+          "src": "backend/index.js",
+          "use": "@railway/node"
+        }
+      ],
+      "env": {
+        "PORT": "8080"
+      }
+    },
+    {
+      "name": "nike-clone-frontend",
+      "type": "static",
+      "builds": [
+        {
+          "src": "frontend/build",
+          "use": "@railway/static"
+        }
+      ]
+    }
+  ]
+}
