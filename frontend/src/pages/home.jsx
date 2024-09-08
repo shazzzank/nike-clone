@@ -1,53 +1,57 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import Layout from "../layout";
+import Layout from "../components/layout/layout";
 import Slider from "../components/slider";
+import Button from "../components/button";
+import { getProduct, getProducts } from "../server";
 
 function Home() {
-  const [banner, setBanner] = useState([]);
+  const [product, setProduct] = useState({});
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+  const position = {
+    container: "text-center",
+    heading: "mt-8",
+    imagewrapper: "h-3/6",
+    image: "scale-150",
+    text: "m-auto w-2/4 mt-3 mb-6",
+  };
+  const design = {
+    heading: "futura text-5xl uppercase tracking-tighter",
+    imagewrapper: "overflow-hidden",
+    image: "object-cover",
+    text: "text-lg",
+  };
 
   useEffect(() => {
-    axios
-      .post("https://nike-clone-gamma-snowy.vercel.app/product", { slug: "phoenix-flyers" })
-      .then((res) => setBanner(res.data))
-      .catch((err) => console.log(err));
-    axios
-      .post("https://nike-clone-gamma-snowy.vercel.app/products")
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.log(err));
+    getProduct({ slug: "phoenix-flyers" }, setProduct);
+    getProducts({}, setProducts);
   }, []);
+
   return (
     <Layout>
-      <div className="p-6">
-        {banner &&
-          banner.map((product) => (
-            <div key={product._id} className="text-center">
-              <div className="overflow-hidden h-3/6">
-                <img
-                  className="object-cover scale-150"
-                  src={product.image}
-                  alt="banner"
-                />
-              </div>
-              <h2 className="text-5xl font-two uppercase tracking-tighter pt-8">
-                {product.name}
-              </h2>
-              <p className="text-lg w-2/4 m-auto pt-3 pb-6">
-                {product.description}
-              </p>
-              <button
-                className="bg-gray-900 py-1.5 px-5 rounded-3xl text-white"
-                onClick={() => navigate("/product/phoenix-flyers")}
-              >
-                Learn More
-              </button>
-            </div>
-          ))}
-        <Slider products={products} heading="Discover" subheading="Shop" />
-      </div>
+      {product && (
+        <div className={position.container}>
+          <div className={`${position.imagewrapper} ${design.imagewrapper}`}>
+            <img
+              className={`${position.image} ${design.image}`}
+              src={product.image}
+              alt={product.slug}
+            />
+          </div>
+          <h1 className={`${position.heading} ${design.heading}`}>
+            {product.name}
+          </h1>
+          <p className={`${position.text} ${design.text}`}>
+            {product.description}
+          </p>
+          <Button
+            text="Learn More"
+            onClick={() => navigate(`/product/${product.slug}`)}
+          />
+          <Slider products={products} heading="Discover" subheading="Shop" />
+        </div>
+      )}
     </Layout>
   );
 }

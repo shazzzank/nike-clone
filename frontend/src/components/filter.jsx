@@ -1,201 +1,150 @@
-import React, { useState } from "react";
-import Tick from "../icons/tick";
-
-const Radio = ({ label, value, selectedValue, handleChange }) => (
-  <div className="block">
-    <input
-      type="radio"
-      className="w-4 h-4 my-1.5"
-      value={value}
-      checked={selectedValue === value}
-      onChange={() => handleChange(value)}
-    />
-    <span className="text-sm ml-2">{label}</span>
-  </div>
-);
-
-const ColorOption = ({ color, selectedValue, handleClick }) => (
-  <div
-    className={`inline-block w-5/12 text-center mt-5 mr-2 hover:brightness-125 hover:cursor-pointer`}
-    onClick={() => handleClick(color)}
-  >
-    {selectedValue === color ? (
-      <Tick className="m-auto bg-green-600 text-white rounded-xl" />
-    ) : (
-      <span className={`w-5 h-5 bg-${color}-400 rounded-xl block m-auto`} />
-    )}
-    <span className="font-medium text-sm">{color}</span>
-  </div>
-);
-
-const SizeOption = ({ size, selectedValue, handleClick }) => (
-  <div
-    className={`w-2/6 inline-block hover:border-gray-700 text-sm text-center border border-gray-200 rounded-md py-1.5 m-1 cursor-pointer ${
-      selectedValue === size ? "border border-gray-700" : ""
-    }`}
-    onClick={() => handleClick(size)}
-  >
-    {size}
-  </div>
-);
+import { useState } from "react";
+import Radio from "./radio";
 
 function Filter(props) {
-  const [filters, setFilters] = useState({
-    category: props.category,
-    minprice: "",
-    maxprice: "",
-    mindiscount: "",
-    maxdiscount: "",
-    price: "",
-    discount: "",
-    color: "",
-    size: "",
-  });
-  const priceRanges = [
-    { label: "Below $1000", value: "<1000" },
-    { label: "$1000 - $2000", value: "1000-2000" },
-    { label: "$2000 - $3000", value: "2000-3000" },
-    { label: "Above $3000", value: ">3000" },
-  ];
-  const discountRanges = [
-    { label: "Below 10%", value: "<10" },
-    { label: "10% - 20%", value: "10-20" },
-    { label: "20% - 30%", value: "20-30" },
-    { label: "Above 30%", value: ">30" },
-  ];
-  const colors = [
-    "blue",
-    "gray",
-    "green",
-    "indigo",
-    "pink",
-    "purple",
-    "red",
-    "yellow",
-  ];
-  const sizes = [
-    "5",
-    "5.5",
-    "6",
-    "6.5",
-    "7",
-    "7.5",
-    "8",
-    "8.5",
-    "9",
-    "9.5",
-    "10",
-    "10.5",
-    "11",
-    "11.5",
-    "12",
-  ];
-
-  function changeFilters(key, value) {
-    setFilters((prev) => {
-      const updatedFilters = { ...prev, [key]: value };
-
-      if (key === "price") {
-        switch (value) {
-          case "<1000":
-            updatedFilters.minprice = 0;
-            updatedFilters.maxprice = 1000;
-            break;
-          case "1000-2000":
-            updatedFilters.minprice = 1000;
-            updatedFilters.maxprice = 2000;
-            break;
-          case "2000-3000":
-            updatedFilters.minprice = 2000;
-            updatedFilters.maxprice = 3000;
-            break;
-          case ">3000":
-            updatedFilters.minprice = 3000;
-            updatedFilters.maxprice = "";
-            break;
-          default:
-            break;
-        }
-      }
-
-      if (key === "discount") {
-        switch (value) {
-          case "<10":
-            updatedFilters.mindiscount = 0;
-            updatedFilters.maxdiscount = 10;
-            break;
-          case "10-20":
-            updatedFilters.mindiscount = 10;
-            updatedFilters.maxdiscount = 20;
-            break;
-          case "20-30":
-            updatedFilters.mindiscount = 20;
-            updatedFilters.maxdiscount = 30;
-            break;
-          case ">30":
-            updatedFilters.mindiscount = 30;
-            updatedFilters.maxdiscount = "";
-            break;
-          default:
-            break;
-        }
-      }
-
-      props.setFilters(updatedFilters);
-
-      return updatedFilters;
-    });
-  }
+  const position = {
+    container: props.boolean ? "hidden" : "w-56",
+  };
+  const design = {
+    hr: "h-px bg-gray-200 w-2/3 my-4",
+  };
 
   return (
-    <>
-      <h4 className="font-medium text-gray-800 mb-4">Price</h4>
-      {priceRanges.map(({ label, value }, index) => (
-        <Radio
-          key={index}
-          label={label}
-          value={value}
-          selectedValue={filters.price}
-          handleChange={(value) => changeFilters("price", value)}
-        />
-      ))}
-      <hr className="h-px my-4 bg-gray-200" />
-      <h4 className="font-medium text-gray-800 mb-4">Offers</h4>
-      {discountRanges.map(({ label, value }, index) => (
-        <Radio
-          key={index}
-          label={label}
-          value={value}
-          selectedValue={filters.discount}
-          handleChange={(value) => changeFilters("discount", value)}
-        />
-      ))}
-      <hr className="h-px my-4 bg-gray-200" />
-      <h4 className="font-medium text-gray-800">Color</h4>
-      <div className="w-9/12 mt-2">
-        {colors.map((color, index) => (
-          <ColorOption
-            key={index}
-            color={color}
-            selectedValue={filters.color}
-            handleClick={(color) => changeFilters("color", color)}
-          />
-        ))}
-      </div>
-      <hr className="h-px my-4 bg-gray-200" />
-      <h4 className="font-medium text-gray-800 mb-4">Size</h4>
-      <div className="flex flex-wrap">
-        {sizes.map((size, index) => (
-          <SizeOption
-            key={index}
-            size={size}
-            selectedValue={filters.size}
-            handleClick={(size) => changeFilters("size", size)}
-          />
-        ))}
-      </div>
-    </>
+    <div className={position.container}>
+      <Price
+        items={["0-1000", "1000-2000", "2000-3000"]}
+        onChange={props.onChange}
+      />
+      <hr className={design.hr} />
+      <Discount items={["0-10", "10-20", "20-30"]} onChange={props.onChange} />
+      <hr className={design.hr} />
+      <Color
+        items={["green", "blue", "red", "yellow", "gray"]}
+        onClick={props.onClick}
+      />
+      <hr className={design.hr} />
+      <Size items={["5", "6", "7", "8"]} onClick={props.onClick} />
+    </div>
   );
 }
 
 export default Filter;
+
+// Sub-components
+
+function Price(props) {
+  const position = {
+    heading: "pb-3",
+  };
+  const design = {
+    heading: "font-medium",
+    text: "text-sm",
+  };
+  const options = props.items.map((item) => {
+    const [start, end] = item.split("-");
+    return `$${start} - $${end}`;
+  });
+
+  return (
+    <div>
+      <h4 className={`${position.heading} ${design.heading}`}>Price</h4>
+      <Radio
+        className={design.text}
+        name="price"
+        onChange={props.onChange}
+        options={options}
+      />
+    </div>
+  );
+}
+
+function Discount(props) {
+  const position = {
+    heading: "pb-3",
+  };
+  const design = {
+    heading: "font-medium",
+    text: "text-sm",
+  };
+  const options = props.items.map((item) => {
+    const [start, end] = item.split("-");
+    return `${start}% - ${end}%`;
+  });
+
+  return (
+    <div>
+      <h4 className={`${position.heading} ${design.heading}`}>Discount</h4>
+      <Radio
+        className={design.text}
+        name="discount"
+        onChange={props.onChange}
+        options={options}
+      />
+    </div>
+  );
+}
+
+function Color(props) {
+  const [color, setColor] = useState(null);
+  const position = {
+    heading: "pb-3",
+    itemwrapper: "grid grid-cols-3 gap-2 w-2/3 pb-4 *:w-6 *:h-6",
+  };
+  const design = {
+    heading: "font-medium",
+    item: "border hover:border-gray-900 rounded-2xl cursor-pointer",
+  };
+
+  return (
+    <div>
+      <h4 className={`${position.heading} ${design.heading}`}>Color</h4>
+      <div className={position.itemwrapper}>
+        {props.items.map((item) => (
+          <input
+            key={item}
+            onClick={() => {
+              props.onClick("color", item);
+              setColor(item);
+            }}
+            className={`${design.item} bg-${item}-400 text-${item}-400 ${
+              color === item && "border-gray-900"
+            }`}
+            readOnly
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Size(props) {
+  const [size, setSize] = useState(null);
+  const position = {
+    heading: "pb-3",
+    itemwrapper: "grid grid-cols-2 w-2/3 gap-2 *:w-10 *:h-9",
+  };
+  const design = {
+    heading: "font-medium",
+    item: "border border-gray-300 text-center rounded-xl cursor-pointer hover:border-gray-900",
+  };
+
+  return (
+    <div>
+      <h4 className={`${position.heading} ${design.heading}`}>Size</h4>
+      <div className={position.itemwrapper}>
+        {props.items.map((item) => (
+          <input
+            key={item}
+            onClick={() => {
+              props.onClick("size", item);
+              setSize(item);
+            }}
+            className={`${design.item} ${size === item && "border-gray-900"}`}
+            value={item}
+            readOnly
+          />
+        ))}
+      </div>
+    </div>
+  );
+}

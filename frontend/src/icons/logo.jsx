@@ -1,12 +1,10 @@
-function LogoIcon(props) {
+function LogoIcon() {
   return (
     <svg
-      className="cursor-pointer"
       width="40"
       height="40"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={props.onClick}
     >
       <path
         stroke="currentColor"

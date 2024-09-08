@@ -1,13 +1,15 @@
-function LarrowIcon() {
+function LarrowIcon(props) {
   return (
     <svg
+      className={props.className}
       aria-hidden="true"
       focusable="false"
       viewBox="0 0 24 24"
       role="img"
-      width="24px"
-      height="24px"
+      width="24"
+      height="24"
       fill="none"
+      onClick={props.onClick}
     >
       <path
         stroke="currentColor"

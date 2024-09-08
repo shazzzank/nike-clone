@@ -1,13 +1,24 @@
+import HeartIcon from "../icons/heart";
+
 function Button(props) {
-  const color =
-    props.type === "white" ? "text-gray-800" : "bg-gray-800 text-white";
+  const position = {
+    item: "py-1.5 px-5",
+    condition: props.light ? "flex gap-2 justify-center" : "",
+  };
+  const design = {
+    item: "border border-gray-400 rounded-full",
+    condition: props.light
+      ? "bg-white text-gray-800"
+      : "bg-gray-900 text-white",
+  };
+
   return (
     <button
-      className={`flex gap-1 justify-center w-full border border-gray-700 rounded-3xl py-3 font-medium mt-3 ${color}`}
+      className={`${position.item} ${position.condition} ${design.item} ${design.condition}`}
       onClick={props.onClick}
     >
       {props.text}
-      {props.icon && <props.icon />}
+      {props.icon && <HeartIcon />}
     </button>
   );
 }

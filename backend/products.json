@@ -1,0 +1,572 @@
+[
+  {
+    "name": "ApocalypseRunners",
+    "category": "Unisex",
+    "description": "Conquer the post-apocalyptic terrain with these rugged yet stylish running shoes designed for survival and speed.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product1.png",
+    "price": 2200,
+    "discount": 25,
+    "rating": 4.3,
+    "stock": 2,
+    "review": [
+      {
+        "name": "Max Power",
+        "review": "ApocalypseRunners are the perfect blend of functionality and style. They've become my go-to shoes for outdoor adventures."
+      }
+    ],
+    "slug": "apocalypse-runners",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5],
+    "colors": ["black", "gray", "green"]
+  },
+  {
+    "name": "BlitzBlades",
+    "category": "Men's",
+    "description": "Strike swiftly with BlitzBlades, the ultimate choice for athletes who demand lightning-fast speed and precision performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product2.png",
+    "price": 2400,
+    "discount": 20,
+    "rating": 4.8,
+    "stock": 2,
+    "review": [
+      {
+        "name": "Alex Green",
+        "review": "BlitzBlades are like wearing a bolt of lightning on your feet. They're unbelievably fast and responsive!"
+      }
+    ],
+    "slug": "blitz-blades",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5],
+    "colors": ["blue", "white", "yellow"]
+  },
+  {
+    "name": "CelestialStompers",
+    "category": "Men's",
+    "description": "Step into the cosmos with CelestialStompers, where style meets comfort in a celestial dance of fashion and function.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product3.png",
+    "price": 2000,
+    "discount": 10,
+    "rating": 4.5,
+    "stock": 40,
+    "review": [
+      {
+        "name": "Sophia Lee",
+        "review": "CelestialStompers are out of this world! Not only do they look amazing, but they're also incredibly comfortable for all-day wear."
+      }
+    ],
+    "slug": "celestial-stompers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 10.5, 11, 11.5, 12],
+    "colors": ["purple", "silver", "red"]
+  },
+  {
+    "name": "ChaosChargers",
+    "category": "Unisex",
+    "description": "Embrace the chaos and conquer the competition with ChaosChargers, the embodiment of controlled frenzy on the track.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product4.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.7,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Chris Taylor",
+        "review": "ChaosChargers give me the edge I need to dominate my opponents. They're a game-changer!"
+      }
+    ],
+    "slug": "chaos-chargers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["black", "orange", "yellow"]
+  },
+  {
+    "name": "CycloneCruisers",
+    "category": "Men's",
+    "description": "Ride the storm with CycloneCruisers, engineered to weather any conditions while delivering unparalleled performance and style.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product5.png",
+    "price": 2200,
+    "discount": 10,
+    "rating": 4.4,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Michael Roberts",
+        "review": "CycloneCruisers are my go-to shoes for outdoor adventures. They're durable, comfortable, and they look awesome!"
+      }
+    ],
+    "slug": "cyclone-cruisers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "gray", "green"]
+  },
+  {
+    "name": "DragonfireDashers",
+    "category": "Men's",
+    "description": "Ignite your passion for running with DragonfireDashers, where fierce style meets blazing speed in a fiery display of performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product6.png",
+    "price": 2100,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Emma Scott",
+        "review": "DragonfireDashers are the perfect combination of style and performance. I feel like I can conquer anything when I wear them!"
+      }
+    ],
+    "slug": "dragonfire-dashers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 10, 10.5, 11, 11.5, 12],
+    "colors": ["red", "orange", "black"]
+  },
+  {
+    "name": "EclipseEnergizers",
+    "category": "Unisex",
+    "description": "Harness the power of celestial alignment with EclipseEnergizers, ensuring every step is charged with unstoppable energy.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product7.png",
+    "price": 2500,
+    "discount": 15,
+    "rating": 4.9,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Ryan Adams",
+        "review": "EclipseEnergizers are simply amazing! The energy return is incredible, and they're so comfortable to wear."
+      }
+    ],
+    "slug": "eclipse-energizers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 10, 10.5, 11, 11.5, 12],
+    "colors": ["black", "blue", "yellow"]
+  },
+  {
+    "name": "FuryFooters",
+    "category": "Unisex",
+    "description": "Unleash your inner beast with FuryFooters, the choice of champions for those who dare to dominate the race.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product8.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.7,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Jessica Thompson",
+        "review": "FuryFooters are my secret weapon on the track. They're lightweight, comfortable, and they make me feel unstoppable!"
+      }
+    ],
+    "slug": "fury-footers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["red", "gray", "green"]
+  },
+  {
+    "name": "GalacticGlide",
+    "category": "Men's",
+    "description": "Embark on an interstellar journey with GalacticGlide, where futuristic design meets unrivaled performance in the race against time.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product9.png",
+    "price": 2400,
+    "discount": 30,
+    "rating": 4.5,
+    "stock": 20,
+    "review": [
+      {
+        "name": "David Clark",
+        "review": "GalacticGlide shoes are out of this world! They're so comfortable, and the grip is amazing. I can't recommend them enough!"
+      }
+    ],
+    "slug": "galactic-glide",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "black", "white"]
+  },
+  {
+    "name": "HyperVolt Kicks",
+    "category": "Unisex",
+    "description": "Unleash the hypercharged energy of these futuristic kicks, crafted for explosive bursts of speed and unmatched performance on the track or the street.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product10.png",
+    "price": 2500,
+    "discount": 10,
+    "rating": 5,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Sarah Smith",
+        "review": "HyperVolt Kicks took my running to the next level! The energy return is insane, and they're so comfortable!"
+      }
+    ],
+    "slug": "hypervolt-kicks",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["black", "green", "red"]
+  },
+  {
+    "name": "InfernoSoles",
+    "category": "Men's",
+    "description": "Ignite your stride with the fiery energy of these scorching-hot shoes, engineered to blaze through any terrain with relentless determination.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product11.png",
+    "price": 1900,
+    "discount": 20,
+    "rating": 4.5,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Emily Johnson",
+        "review": "InfernoSoles are fire! They make me feel unstoppable on the trail, and the grip is incredible."
+      }
+    ],
+    "slug": "inferno-soles",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 10, 10.5, 11, 11.5, 12],
+    "colors": ["red", "orange", "yellow"]
+  },
+  {
+    "name": "NebulaNikes",
+    "category": "Unisex",
+    "description": "Explore the far reaches of the galaxy with NebulaNikes, where futuristic design meets unparalleled performance in an interstellar voyage of style and comfort.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product12.png",
+    "price": 2600,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Lucas Brown",
+        "review": "NebulaNikes are like walking on clouds! They're incredibly comfortable, and they look amazing. I'm in love!"
+      }
+    ],
+    "slug": "nebula-nikes",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "purple", "white"]
+  },
+  {
+    "name": "NovaSprints",
+    "category": "Men's",
+    "description": "Illuminate your path to victory with NovaSprints, where explosive speed meets unparalleled comfort in a dazzling display of performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product13.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.7,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Mark Evans",
+        "review": "NovaSprints are simply amazing! They're lightweight, comfortable, and they make me feel like I'm flying on the track."
+      }
+    ],
+    "slug": "nova-sprints",
+    "sizes": [5, 5.5, 6, 8.5, 10.5, 11, 11.5, 12],
+    "colors": ["black", "gray", "white"]
+  },
+  {
+    "name": "PhoenixFlyers",
+    "category": "Men's",
+    "description": "Rise from the ashes with PhoenixFlyers, the ultimate choice for athletes who seek to soar to new heights in both style and performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product14.png",
+    "price": 2200,
+    "discount": 15,
+    "rating": 4.4,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Olivia White",
+        "review": "PhoenixFlyers are incredible! They're so comfortable, and they give me the confidence to push my limits every time I wear them."
+      }
+    ],
+    "slug": "phoenix-flyers",
+    "sizes": [5, 5.5, 6, 8.5, 10.5, 11, 11.5, 12],
+    "colors": ["red", "black", "yellow"]
+  },
+  {
+    "name": "QuantumQuicks",
+    "category": "Unisex",
+    "description": "Defy the laws of physics and quantum leap ahead with QuantumQuicks, the groundbreaking shoes engineered for speed, agility, and unmatched performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product15.png",
+    "price": 2700,
+    "discount": 10,
+    "rating": 4.9,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Sophie Miller",
+        "review": "QuantumQuicks are simply mind-blowing! They're incredibly responsive, and they make me feel like I'm running on air."
+      }
+    ],
+    "slug": "quantum-quicks",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "black", "white"]
+  },
+  {
+    "name": "StealthStorms",
+    "category": "Men's",
+    "description": "Master the art of stealth with StealthStorms, where sleek design meets unrivaled performance in a shadowy dance of speed and precision.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product16.png",
+    "price": 2400,
+    "discount": 10,
+    "rating": 4.8,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Jack Wilson",
+        "review": "StealthStorms are amazing! They're so comfortable, and they make me feel like a ninja on the track. I love them!"
+      }
+    ],
+    "slug": "stealth-storms",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["black", "gray", "green"]
+  },
+  {
+    "name": "TitanTreads",
+    "category": "Men's",
+    "description": "Conquer the ground beneath your feet with the strength of a titan in these rugged yet agile shoes engineered for unmatched durability and performance.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product17.png",
+    "price": 2100,
+    "discount": 10,
+    "rating": 4,
+    "stock": 10,
+    "review": [
+      {
+        "name": "Jake Doe",
+        "review": "As sturdy as a titan's grip yet agile as a dancer's step, TitanTreads are the ultimate fusion of strength and speed."
+      }
+    ],
+    "slug": "titan-treads",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 11.5, 12],
+    "colors": ["brown", "gray", "black"]
+  },
+  {
+    "name": "VenomVentures",
+    "category": "Unisex",
+    "description": "Strike fear into the hearts of your rivals with VenomVentures, the venomous choice for those who thrive on the thrill of victory.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product18.png",
+    "price": 2600,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 10,
+    "review": [
+      {
+        "name": "Emma Thompson",
+        "review": "VenomVentures are incredible! They're so stylish, and they make me feel like a superhero on the track. I love them!"
+      }
+    ],
+    "slug": "venom-ventures",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 11.5, 12],
+    "colors": ["black", "green", "purple"]
+  },
+  {
+    "name": "VortexVoyagers",
+    "category": "Men's",
+    "description": "Embark on a whirlwind adventure with VortexVoyagers, where sleek design meets unparalleled performance in a journey of speed and style.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product19.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.7,
+    "stock": 10,
+    "review": [
+      {
+        "name": "Sophia Johnson",
+        "review": "VortexVoyagers are amazing! They're so comfortable, and they give me the confidence to push my limits every time I wear them."
+      }
+    ],
+    "slug": "vortex-voyagers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 11.5, 12],
+    "colors": ["blue", "gray", "white"]
+  },
+  {
+    "name": "ThunderStrides",
+    "category": "Men's",
+    "description": "Feel the electrifying power with each step in these lightning-fast kicks designed to propel you forward with unmatched speed and agility.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product20.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 10,
+    "review": [
+      {
+        "name": "James Smith",
+        "review": "ThunderStrides are incredible! They're so stylish, and they make me feel like I'm flying on the track. I love them!"
+      }
+    ],
+    "slug": "thunder-strides",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "black", "yellow"]
+  },
+  {
+    "name": "ZephyrZooms",
+    "category": "Men's",
+    "description": "Experience the gentle breeze of unmatched comfort and speed with ZephyrZooms, designed to make you feel like you're walking on air.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product21.png",
+    "price": 2200,
+    "discount": 10,
+    "rating": 4.5,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Daniel Brown",
+        "review": "ZephyrZooms are amazing! They're incredibly comfortable, and they make me feel like I'm floating on clouds. I love them!"
+      }
+    ],
+    "slug": "zephyr-zooms",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["white", "gray", "red"]
+  },
+  {
+    "name": "WildfireWalkers",
+    "category": "Men's",
+    "description": "Ignite your journey with WildfireWalkers, where fiery style meets untamed performance in a blaze of passion and determination.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product22.png",
+    "price": 2100,
+    "discount": 10,
+    "rating": 4.4,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Grace Johnson",
+        "review": "WildfireWalkers are incredible! They're so stylish, and they make me feel like I can conquer anything. I love them!"
+      }
+    ],
+    "slug": "wildfire-walkers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["orange", "black", "yellow"]
+  },
+  {
+    "name": "VelocityVentures",
+    "category": "Unisex",
+    "description": "Embark on a high-speed adventure with VelocityVentures, where sleek design meets unrivaled performance in a race against time.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product23.png",
+    "price": 2400,
+    "discount": 10,
+    "rating": 4.8,
+    "stock": 20,
+    "review": [
+      {
+        "name": "Andrew Clark",
+        "review": "VelocityVentures are amazing! They're so comfortable, and they make me feel like I'm flying on the track. I love them!"
+      }
+    ],
+    "slug": "velocity-ventures",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["blue", "black", "green"]
+  },
+  {
+    "name": "UltravioletUplifts",
+    "category": "Men's",
+    "description": "Illuminate your path with UltravioletUplifts, where vibrant style meets unparalleled performance in a neon glow of energy and excitement.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product24.png",
+    "price": 2200,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 10,
+    "review": [
+      {
+        "name": "Lily Smith",
+        "review": "UltravioletUplifts are incredible! They're so stylish, and they make me feel like I'm dancing on air. I love them!"
+      }
+    ],
+    "slug": "ultraviolet-uplifts",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["purple", "pink", "white"]
+  },
+  {
+    "name": "TerraTreads",
+    "category": "Men's",
+    "description": "Conquer the earth with TerraTreads, where rugged design meets unmatched performance in a journey of exploration and adventure.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product25.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.7,
+    "stock": 40,
+    "review": [
+      {
+        "name": "William Johnson",
+        "review": "TerraTreads are amazing! They're so comfortable, and they give me the confidence to tackle any terrain. I love them!"
+      }
+    ],
+    "slug": "terra-treads",
+    "sizes": [5, 5.5, 6, 6.5, 7, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["brown", "green", "gray"]
+  },
+  {
+    "name": "SolarSprints",
+    "category": "Men's",
+    "description": "Harness the power of the sun with SolarSprints, where sustainable design meets unparalleled performance in a race towards a brighter future.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product26.png",
+    "price": 2500,
+    "discount": 10,
+    "rating": 4.8,
+    "stock": 5,
+    "review": [
+      {
+        "name": "John Miller",
+        "review": "SolarSprints are amazing! They're so comfortable, and the eco-friendly design is a huge bonus. Highly recommended!"
+      }
+    ],
+    "slug": "solar-sprints",
+    "sizes": [5, 5.5, 6, 6.5, 7, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["yellow", "black", "orange"]
+  },
+  {
+    "name": "LunarLeaps",
+    "category": "Men's",
+    "description": "Experience weightlessness with LunarLeaps, where lunar-inspired design meets unmatched performance in a celestial dance of grace and agility.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product27.png",
+    "price": 2400,
+    "discount": 30,
+    "rating": 4.7,
+    "stock": 5,
+    "review": [
+      {
+        "name": "Emily Davis",
+        "review": "LunarLeaps are incredible! They're so lightweight, and they make me feel like I'm floating on the moon. Love them!"
+      }
+    ],
+    "slug": "lunar-leaps",
+    "sizes": [5, 5.5, 6, 6.5, 7, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["silver", "black", "blue"]
+  },
+  {
+    "name": "FrostbiteFeet",
+    "category": "Unisex",
+    "description": "Conquer the icy terrain with FrostbiteFeet, where arctic-inspired design meets unmatched performance in a chilling display of resilience and speed.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product28.png",
+    "price": 2300,
+    "discount": 10,
+    "rating": 4.6,
+    "stock": 5,
+    "review": [
+      {
+        "name": "Alex Johnson",
+        "review": "FrostbiteFeet are amazing! They keep my feet warm and dry even in the coldest conditions. Highly recommended!"
+      }
+    ],
+    "slug": "frostbite-feet",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12],
+    "colors": ["white", "blue", "gray"]
+  },
+  {
+    "name": "ThunderstormTrackers",
+    "category": "Women's",
+    "description": "Conquer the storm with ThunderstormTrackers, where rugged design meets unmatched performance in a thunderous display of speed and agility.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product29.png",
+    "price": 2600,
+    "discount": 20,
+    "rating": 4.9,
+    "stock": 40,
+    "review": [
+      {
+        "name": "James Brown",
+        "review": "ThunderstormTrackers are amazing! They're so comfortable, and they give me the confidence to tackle any terrain. I love them!"
+      }
+    ],
+    "slug": "thunderstorm-trackers",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 10.5, 11, 11.5, 12],
+    "colors": ["black", "pink", "purple"]
+  },
+  {
+    "name": "AeroAce",
+    "category": "Unisex",
+    "description": "Soar through the skies with AeroAce, where aerodynamic design meets unparalleled performance in a high-flying adventure of speed and style.",
+    "image": "https://my-unique-ecommerce-v2.s3.eu-north-1.amazonaws.com/shoes/product30.png",
+    "price": 2700,
+    "discount": 10,
+    "rating": 5,
+    "stock": 2,
+    "review": [
+      {
+        "name": "Sophia Clark",
+        "review": "AeroAce shoes are incredible! They're so comfortable, and they make me feel like I'm flying on the track. Highly recommended!"
+      }
+    ],
+    "slug": "aero-ace",
+    "sizes": [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5],
+    "colors": ["blue", "gray", "red"]
+  }
+]

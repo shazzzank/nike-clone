@@ -1,101 +1,40 @@
 import { useState, useEffect } from "react";
+import Card from "./card";
 import LArrowIcon from "../icons/larrow";
 import RArrowIcon from "../icons/rarrow";
+import { getProducts } from "../server";
 
-function Slider({ products, heading, subheading }) {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isScrollStart, setIsScrollStart] = useState(true);
-  const [isScrollEnd, setIsScrollEnd] = useState(false);
+function Slider(props) {
+  const [products, setProducts] = useState([]);
+  const [start, setStart] = useState(false);
+  const [end, setEnd] = useState(true);
+  const position = "flex gap-2 my-5";
+  const design = "overflow-x-scroll";
 
   useEffect(() => {
-    const container = document.querySelector(".hide-scrollbar");
-    const handleScroll = () => {
-      const newPosition = container.scrollLeft;
-      setScrollPosition(newPosition);
-      setIsScrollStart(newPosition === 0);
-      setIsScrollEnd(
-        newPosition + container.clientWidth === container.scrollWidth,
-      );
-    };
-    container.addEventListener("scroll", handleScroll);
-    return () => container.removeEventListener("scroll", handleScroll);
+    getProducts({}, setProducts);
   }, []);
 
-  const scroll = (scrollOffset) => {
-    const container = document.querySelector(".hide-scrollbar");
-    container.scrollTo({
-      left: Math.max(scrollPosition + scrollOffset, 0),
-      behavior: "smooth",
-    });
-  };
+  function handleScroll(e) {
+    setStart(e.target.scrollLeft !== 0);
+    setEnd(e.target.scrollLeft + e.target.clientWidth !== e.target.scrollWidth);
+  }
 
   return (
     <>
-      <div className="flex items-center justify-between mt-5">
-        <p className="text-2xl">{heading}</p>
-        <div className="flex items-center space-x-3">
-          <p>{subheading}</p>
-          <button
-            className={`rounded-3xl p-2.5 ${
-              isScrollStart
-                ? "bg-gray-100 text-gray-300"
-                : "bg-gray-200 hover:bg-gray-300"
-            }`}
-            onClick={() => scroll(-500)}
-          >
-            <LArrowIcon />
-          </button>
-          <button
-            className={`rounded-3xl p-2.5 ${
-              isScrollEnd
-                ? "bg-gray-100 text-gray-300"
-                : "bg-gray-200 hover:bg-gray-300"
-            }`}
-            onClick={() => scroll(500)}
-          >
-            <RArrowIcon />
-          </button>
-        </div>
-      </div>
-      <div className="flex gap-2 hide-scrollbar overflow-x-scroll my-5">
+      <Topbar
+        heading={props.heading}
+        subheading={props.subheading}
+        start={start}
+        end={end}
+      />
+      <div
+        onScroll={(e) => handleScroll(e)}
+        className={`scrollbar ${position} ${design}`}
+      >
         {products &&
           products.map((product) => (
-            <a
-              key={product._id}
-              className="flex-shrink-0"
-              style={{ width: "30vw" }}
-              href={`/product/${product.slug}`}
-            >
-              <div className="flex flex-col">
-                <img
-                  key={product._id}
-                  className="bg-gray-100 px-5 object-contain w-full border border-transparent rounded-lg"
-                  style={{ height: "45vh" }}
-                  src={product.image}
-                  alt={product.name}
-                />
-                <p className="font-medium mt-2 text-gray-900">{product.name}</p>
-                <p className="text-gray-500">{product.category} Shoes</p>
-                <p className="font-medium mt-2 text-gray-900">
-                  {product.discount && product.discount > 0 ? (
-                    <>
-                      <span>
-                        {"$" +
-                          (
-                            product.price -
-                            (product.price * product.discount) / 100
-                          ).toFixed(2)}
-                      </span>
-                      <span className="text-gray-300 px-2 line-through">
-                        {"$" + product.price.toFixed(2)}
-                      </span>
-                    </>
-                  ) : (
-                    <span>{"$" + product.price.toFixed(2)}</span>
-                  )}
-                </p>
-              </div>
-            </a>
+            <Card key={product._id} product={product} />
           ))}
       </div>
     </>
@@ -103,3 +42,62 @@ function Slider({ products, heading, subheading }) {
 }
 
 export default Slider;
+
+// Sub-component
+
+function Topbar(props) {
+  const position = {
+    container: "flex justify-between mt-10 items-center px-2",
+    buttonwrapper: "flex items-center gap-3",
+    larrow: "p-2.5",
+    rarrow: "p-2.5",
+  };
+  const design = {
+    heading: "text-2xl",
+    larrow: "bg-gray-100 rounded-3xl",
+    larrowactive: props.start
+      ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+      : "text-gray-300",
+    rarrow: "bg-gray-100 rounded-3xl",
+    rarrowactive: props.end
+      ? "bg-gray-200 text-gray-800 hover:bg-gray-300"
+      : "text-gray-300",
+  };
+
+  function handleScrollLeft() {
+    const target = document.querySelector(".scrollbar");
+    target.scrollTo({
+      left: target.scrollLeft - target.clientWidth,
+      behavior: "smooth",
+    });
+  }
+
+  function handleScrollRight() {
+    const target = document.querySelector(".scrollbar");
+    target.scrollTo({
+      left: target.scrollLeft + target.clientWidth,
+      behavior: "smooth",
+    });
+  }
+
+  return (
+    <div className={position.container}>
+      <h3 className={design.heading}>{props.heading}</h3>
+      <div className={position.buttonwrapper}>
+        <h3>{props.subheading}</h3>
+        <div
+          className={`${position.larrow} ${design.larrow} ${design.larrowactive}`}
+          onClick={() => handleScrollLeft()}
+        >
+          <LArrowIcon />
+        </div>
+        <div
+          className={`${position.rarrow} ${design.rarrow} ${design.rarrowactive}`}
+          onClick={() => handleScrollRight()}
+        >
+          <RArrowIcon />
+        </div>
+      </div>
+    </div>
+  );
+}

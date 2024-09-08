@@ -1,4 +1,4 @@
-function Bin() {
+function Bin(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,7 +6,9 @@ function Bin() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-5 h-5"
+      width="18"
+      height="18"
+      onClick={props.onClick}
     >
       <path
         strokeLinecap="round"
