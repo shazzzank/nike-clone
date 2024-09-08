@@ -1,38 +1,18 @@
 # railway.toml
 [build]
-  # Define the build settings for the project
-  # In this case, you have separate settings for frontend and backend
-
-[builds]
-  [[builds]]
-    # Define a build for the frontend service
-    command = "npm run build --prefix frontend"
-    directory = "frontend/build"
-    name = "frontend"
-    # Set the base directory for the frontend build
-    base = "frontend"
-    [builds.env]
-      NODE_ENV = "production"
-
-  [[builds]]
-    # Define a build for the backend service
-    command = "npm install --prefix backend && npm start --prefix backend"
-    directory = "backend"
-    name = "backend"
-    # Set the base directory for the backend build
-    base = "backend"
-    [builds.env]
-      NODE_ENV = "production"
+  command = "npm run build --prefix frontend"  # Command to build the frontend
+  directory = "frontend/build"  # Directory where the built frontend files will be located
 
 [deploy]
-  # Define deployment settings
-  [[deploys]]
-    # The build command for the backend (Node.js app)
-    command = "npm start --prefix backend"
-    directory = "backend"
+  command = "npm start --prefix backend"  # Command to start the backend server
 
-  [[deploys]]
-    # The build command for the frontend (React app)
-    command = "npm run build --prefix frontend"
-    directory = "frontend/build"
+[[builds]]
+  name = "frontend"
+  command = "npm run build --prefix frontend"  # Command to build the frontend
+  directory = "frontend/build"  # Directory where the built frontend files will be located
+
+[[builds]]
+  name = "backend"
+  command = "npm install --prefix backend && npm start --prefix backend"  # Command to install and start the backend
+  directory = "backend"  # Directory for the backend
 
