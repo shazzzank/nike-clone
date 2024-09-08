@@ -11,11 +11,11 @@ function Home() {
 
   useEffect(() => {
     axios
-      .post("/product", { slug: "phoenix-flyers" })
+      .post("https://nike-clone-gamma-snowy.vercel.app/product", { slug: "phoenix-flyers" })
       .then((res) => setBanner(res.data))
       .catch((err) => console.log(err));
     axios
-      .post("/products")
+      .post("https://nike-clone-gamma-snowy.vercel.app/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);

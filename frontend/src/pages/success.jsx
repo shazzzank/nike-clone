@@ -29,12 +29,12 @@ function Success() {
         const cartJSON = JSON.parse(sessionStorage.getItem("cart")) || [];
 
         try {
-          const userRes = await axios.post("/user/create", userJSON);
+          const userRes = await axios.post("https://nike-clone-gamma-snowy.vercel.app/user/create", userJSON);
           const cartRes = await axios.post(
-            "/cart/create",
+            "https://nike-clone-gamma-snowy.vercel.app/cart/create",
             cartJSON.map((item) => ({ ...item, product: item.product._id })),
           );
-          const orderRes = await axios.post("/order/create", {
+          const orderRes = await axios.post("https://nike-clone-gamma-snowy.vercel.app/order/create", {
             user: userRes.data._id,
             cart: cartRes.data._id,
             amount:
@@ -46,7 +46,7 @@ function Success() {
             ),
           });
           sessionStorage.setItem("orderId", JSON.stringify(orderRes.data._id));
-          await axios.post("/payment/create", {
+          await axios.post("https://nike-clone-gamma-snowy.vercel.app/payment/create", {
             order: orderRes.data._id,
             mode: payment.mode,
             promo: payment.promo,

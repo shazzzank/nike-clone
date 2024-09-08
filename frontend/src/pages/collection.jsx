@@ -18,7 +18,7 @@ function Collection(props) {
   useEffect(
     () => {
       axios
-        .post("/products", filters)
+        .post("https://nike-clone-gamma-snowy.vercel.app/products", filters)
         .then((res) => setProducts(res.data))
         .catch((err) => console.log(err));
     },

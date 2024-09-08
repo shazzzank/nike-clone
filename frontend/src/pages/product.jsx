@@ -21,7 +21,7 @@ function Product() {
 
   useEffect(() => {
     axios
-      .post("/product", { slug: slug })
+      .post("https://nike-clone-gamma-snowy.vercel.app/product", { slug: slug })
       .then((res) => setProduct(res.data[0]))
       .catch((err) => console.log(err));
   }, [slug]);
@@ -29,7 +29,7 @@ function Product() {
   useEffect(() => {
     product &&
       axios
-        .post("/products", {
+        .post("https://nike-clone-gamma-snowy.vercel.app/products", {
           category: product.category,
           minprice: product.price - 100,
           maxprice: product.price + 100,

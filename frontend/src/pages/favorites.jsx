@@ -11,7 +11,7 @@ function Favorites() {
 
   useEffect(() => {
     axios
-      .post("/products")
+      .post("https://nike-clone-gamma-snowy.vercel.app/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);
