@@ -1,4 +1,0 @@
-[build]
-base = "frontend"
-publish = "build"
-command = "npx update-browserslist-db@latest && npm run build"
